@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 52320211379eb2648b760939326a2fc3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6901346900036096344
+    second: PC_Jump_0
+  - first:
+      213: 7603455267452871000
+    second: PC_Jump_1
+  - first:
+      213: 5194478207163193981
+    second: PC_Jump_2
+  - first:
+      213: -564035807346315490
+    second: PC_Jump_3
+  - first:
+      213: -4059711619887339414
+    second: PC_Jump_4
+  - first:
+      213: -5406849193183033534
+    second: PC_Jump_5
+  - first:
+      213: -3187998957272236434
+    second: PC_Jump_6
+  - first:
+      213: 4561763464033016108
+    second: PC_Jump_7
+  - first:
+      213: 9217025809297549511
+    second: PC_Jump_8
+  - first:
+      213: 4289370214183290342
+    second: PC_Jump_9
+  - first:
+      213: -841575305356238221
+    second: PC_Jump_10
+  - first:
+      213: 5285263034900138323
+    second: PC_Jump_11
+  - first:
+      213: -5561643981267018016
+    second: PC_Jump_12
+  - first:
+      213: -7663235243664288838
+    second: PC_Jump_13
+  - first:
+      213: 88197656150148052
+    second: PC_Jump_14
+  - first:
+      213: 5924087212030882353
+    second: PC_Jump_15
+  - first:
+      213: -7473159883917225387
+    second: PC_Jump_16
+  - first:
+      213: -1447300065903278770
+    second: PC_Jump_17
+  - first:
+      213: -6253218750342874345
+    second: PC_Jump_18
+  - first:
+      213: 6049166674146415406
+    second: PC_Jump_19
+  - first:
+      213: 402711285169540356
+    second: PC_Jump_20
+  - first:
+      213: 2890684071631992084
+    second: PC_Jump_21
+  - first:
+      213: 5421750828010913422
+    second: PC_Jump_22
+  - first:
+      213: -3523392719789326543
+    second: PC_Jump_23
+  - first:
+      213: -5019821757672753066
+    second: PC_Jump_24
+  - first:
+      213: -3167186086756428133
+    second: PC_Jump_25
+  - first:
+      213: 8031679699820547419
+    second: PC_Jump_26
+  - first:
+      213: -1985987460518658078
+    second: PC_Jump_27
+  - first:
+      213: -9046364214726789191
+    second: PC_Jump_28
+  - first:
+      213: 2260985073075519560
+    second: PC_Jump_29
+  - first:
+      213: 4587347882310369072
+    second: PC_Jump_30
+  - first:
+      213: 8634491344552822114
+    second: PC_Jump_31
+  - first:
+      213: 622793836286841412
+    second: PC_Jump_32
+  - first:
+      213: 7216625377874480358
+    second: PC_Jump_33
+  - first:
+      213: -4511554806326843173
+    second: PC_Jump_34
+  - first:
+      213: 5822009413931300961
+    second: PC_Jump_35
+  - first:
+      213: -8196542895503479061
+    second: PC_Jump_36
+  - first:
+      213: 297711680109360332
+    second: PC_Jump_37
+  - first:
+      213: -2876972974602179478
+    second: PC_Jump_38
+  - first:
+      213: 6103038487554833626
+    second: PC_Jump_39
+  - first:
+      213: 2176486111240511914
+    second: PC_Jump_40
+  - first:
+      213: 4061581342354130895
+    second: PC_Jump_41
+  - first:
+      213: 2166941973218002570
+    second: PC_Jump_42
+  - first:
+      213: 7037973608341980650
+    second: PC_Jump_43
+  - first:
+      213: 6905925701665343370
+    second: PC_Jump_44
+  - first:
+      213: 1596947685489503949
+    second: PC_Jump_45
+  - first:
+      213: 9072111458379280997
+    second: PC_Jump_46
+  - first:
+      213: 8534925109823009433
+    second: PC_Jump_47
+  - first:
+      213: 6082219879279344633
+    second: PC_Jump_48
+  - first:
+      213: 3101867526507303524
+    second: PC_Jump_49
+  - first:
+      213: -6863943453474305293
+    second: PC_Jump_50
+  - first:
+      213: -8950566065456370631
+    second: PC_Jump_51
+  - first:
+      213: 2303566683619822651
+    second: PC_Jump_52
+  - first:
+      213: -7378578977231058532
+    second: PC_Jump_53
+  - first:
+      213: 4051303403854038852
+    second: PC_Jump_54
+  - first:
+      213: -1662869022813573335
+    second: PC_Jump_55
+  - first:
+      213: 5881438980756578605
+    second: PC_Jump_56
+  - first:
+      213: 6327986390794344887
+    second: PC_Jump_57
+  - first:
+      213: 410491635309937884
+    second: PC_Jump_58
+  - first:
+      213: -1584359321813143562
+    second: PC_Jump_59
+  - first:
+      213: -4528034893628105554
+    second: PC_Jump_60
+  - first:
+      213: 4763192722869780270
+    second: PC_Jump_61
+  - first:
+      213: -5720025638031808904
+    second: PC_Jump_62
+  - first:
+      213: -66475550527285332
+    second: PC_Jump_63
+  - first:
+      213: -3863675219731799162
+    second: PC_Jump_64
+  - first:
+      213: -3958973903123600754
+    second: PC_Jump_65
+  - first:
+      213: -1021439015906223803
+    second: PC_Jump_66
+  - first:
+      213: 47396936026396176
+    second: PC_Jump_67
+  - first:
+      213: 3694731351494967128
+    second: PC_Jump_68
+  - first:
+      213: 3005216480806810808
+    second: PC_Jump_69
+  - first:
+      213: 8245392161936242665
+    second: PC_Jump_70
+  - first:
+      213: -3026486239936521609
+    second: PC_Jump_71
+  - first:
+      213: 1022269255574310481
+    second: PC_Jump_72
+  - first:
+      213: -4215031045517436940
+    second: PC_Jump_73
+  - first:
+      213: -7779203811458695215
+    second: PC_Jump_74
+  - first:
+      213: -557043555214597815
+    second: PC_Jump_75
+  - first:
+      213: -7362836033131139533
+    second: PC_Jump_76
+  - first:
+      213: 5244341876598787549
+    second: PC_Jump_77
+  - first:
+      213: 194408387423703117
+    second: PC_Jump_78
+  - first:
+      213: 2120737866465482352
+    second: PC_Jump_79
+  - first:
+      213: -3285503864366361418
+    second: PC_Jump_80
+  - first:
+      213: 6484510014224686360
+    second: PC_Jump_81
+  - first:
+      213: -9705812797605736
+    second: PC_Jump_82
+  - first:
+      213: -8367878587519279531
+    second: PC_Jump_83
+  - first:
+      213: -6320383008768050647
+    second: PC_Jump_84
+  - first:
+      213: -5054926582083707964
+    second: PC_Jump_85
+  - first:
+      213: 522068956477710824
+    second: PC_Jump_86
+  - first:
+      213: 2103643347710586593
+    second: PC_Jump_87
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8511560d07286cf50800000000000000
+      internalID: 6901346900036096344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851e91ae746e48960800000000000000
+      internalID: 7603455267452871000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a587b686e761840800000000000000
+      internalID: 5194478207163193981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fa58eeb642c28f0800000000000000
+      internalID: -564035807346315490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68e61e7ac109a7c0800000000000000
+      internalID: -4059711619887339414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247c7363e4307f4b0800000000000000
+      internalID: -5406849193183033534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
