@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameCamera gameCam;
 
     public GameHandler gameHandler;
     public Text scoreText;
@@ -16,19 +17,32 @@ public class Player : MonoBehaviour
     public CharacterController2D characterController;
     public Rigidbody2D rigidBody2d;
 
-    public float runSpeed = 0f;
-    public float normalSpeed = 40f;
+    public float runSpeed;
+    public float normalSpeed;
+    public float maxSpeed;
     float horizontalMove = 0f;
 
     public Animator animator;
 
     bool isJumping = false;
-    bool afterJump = false;
+    public bool afterJump = false;
+    public bool inAir = false;
     public bool isDead = false;
+    public bool afterSpeedUp = false;
 
+
+    public GameObject ui;
+    public GameObject deathScreen;
+
+    public void Start()
+    {
+        ui.SetActive(true);
+        deathScreen.SetActive(false);
+    }
 
     private void Update()
     {
+
         if (!isDead)
         {
             int score = (int)(Mathf.Round(transform.position.x) / 2);
@@ -43,15 +57,16 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("IsFalling", false);
             }
-            if (afterJump)
+            if (afterSpeedUp)
             {
                 if (runSpeed > normalSpeed)
                 {
-                    float tempRun = runSpeed - 1;
+                    float tempRun = runSpeed -1;
                     if (tempRun <= normalSpeed)
                     {
                         runSpeed = normalSpeed;
-                        afterJump = false;
+                        afterSpeedUp = false;
+                        //animator.SetFloat("RunningSpeed", 1f); v0.6
                     }
                     else
                     {
@@ -63,7 +78,7 @@ public class Player : MonoBehaviour
             {
                 PlayerPrefs.SetInt("PlayerHighscore", score);
             }
-
+            //animator.SetFloat("RunningSpeed",  1 + runSpeed);
             scoreText.text = score+"m";
             coinText.text = "$" + PlayerPrefs.GetInt("PlayerCoins");
             highscoreText.text = PlayerPrefs.GetInt("PlayerHighscore")+"m";
@@ -81,31 +96,47 @@ public class Player : MonoBehaviour
     {
         animator.SetBool("IsJumping", false);
         afterJump = true;
+        inAir = false;
     }
 
     public void OnJumpButton()
     {
         animator.SetBool("IsJumping", true);
         isJumping = true;
-     }
+        inAir = true; 
+    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Coin"))
+        if (collider.gameObject.CompareTag("Coin"))
         {
             PlayerPrefs.SetInt("PlayerCoins", PlayerPrefs.GetInt("PlayerCoins") + 1);
-            Destroy(collision.gameObject);
+            Destroy(collider.gameObject);
         }
-        if (collision.gameObject.CompareTag("Respawn"))
+        if (collider.gameObject.CompareTag("Respawn"))
         {
             gameHandler.LoadGame();
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         if (collision.gameObject.CompareTag("Death"))
         {
             isDead = true;
             Instantiate(blood, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            gameHandler.LoadGame();
+            ui.SetActive(false);
+            deathScreen.SetActive(true);
         }
+    }
+
+    public float GetRunspeed()
+    {
+        return runSpeed;
+    }
+    public void SetRunspeed(float newRunspeed)
+    {
+        runSpeed = newRunspeed;
     }
 }

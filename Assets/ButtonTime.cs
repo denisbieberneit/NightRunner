@@ -9,34 +9,35 @@ public class ButtonTime : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public Player player;
     public CharacterController2D controller;
     public bool buttonPressed;
-    float jumpForce = 0f;
-    float forceMax = 800f;
+    float jumpForce = 40f;
+    float forceMax = 1200f;
 
 
     private void Update()
     {
         if (!player.isDead)
         {
-            if (buttonPressed)
-            {
-                jumpForce += 25f;
-                if (jumpForce > forceMax)
+                if (buttonPressed && !player.inAir)
                 {
-                    jumpForce = forceMax;
+                    player.afterJump = false;
+                    jumpForce += 25f;
+                    if (jumpForce > forceMax)
+                    {
+                        jumpForce = forceMax;
+                    }
+                    if (player.GetRunspeed() < player.maxSpeed)
+                    {
+                        player.SetRunspeed(player.GetRunspeed() + (jumpForce/2000));
+                    }
+                    if(player.GetRunspeed() > player.maxSpeed)
+                    {
+                        player.SetRunspeed(player.maxSpeed);
+                    }
                 }
-                player.runSpeed = player.runSpeed + (jumpForce / 500);
-            }
-            else
-            {
-                if (player.runSpeed <= player.normalSpeed)
+                else
                 {
-                    player.runSpeed = player.normalSpeed;
-                }else if (player.runSpeed > player.normalSpeed)
-                {
-                    player.runSpeed = player.runSpeed - (jumpForce / 1000);
+                    jumpForce = 40;
                 }
-                jumpForce = 0;
-            }
         }
     }
 

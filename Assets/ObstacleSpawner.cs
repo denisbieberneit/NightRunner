@@ -19,12 +19,12 @@ public class ObstacleSpawner : MonoBehaviour
             GameObject obstacle = getRandomLevelPart();
             if (lastVec == new Vector2(0,0))
             {
-                lastVec = new Vector2(startingPoint.position.x + 30, height.position.y);
+                lastVec = new Vector2(startingPoint.position.x + 150, height.position.y);
                 Instantiate(obstacle,lastVec, height.rotation);
             }
             else
             {
-                lastVec = new Vector2(lastVec.x + Random.Range(15, 20), height.position.y);
+                lastVec = new Vector2(lastVec.x + Random.Range(100, 110), height.position.y);
                 Instantiate(obstacle, lastVec, height.rotation);
             }
             if (endpoint.position.x - 300 <= lastVec.x)

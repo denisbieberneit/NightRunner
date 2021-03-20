@@ -9,14 +9,14 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private GameObject player;
     private GameObject lastObject = null;
 
-    int timer = 2000;
-
     float distanceToNext;
     float heightToNext;
 
+    public bool spawnNext = true;
+
     private void FixedUpdate()
     {
-        if (timer >= 2000)
+        if (spawnNext)
         {
             if (lastObject == null)
             {
@@ -24,8 +24,7 @@ public class LevelGenerator : MonoBehaviour
             }
             Transform lastHeight = lastObject.transform.Find("Height");
             Transform lastDistance = lastObject.transform.Find("Distance_Right");
-            timer = 0;
-            GameObject levelPart= (GameObject) Instantiate(getRandomLevelPart(), new Vector2(lastDistance.position.x + Random.Range(30,50), lastDistance.position.y), levelPart_01.transform.rotation);
+            GameObject levelPart= (GameObject) Instantiate(getRandomLevelPart(), new Vector2(lastDistance.position.x + 140, lastDistance.position.y), levelPart_01.transform.rotation);
             Transform newHeight = levelPart.transform.Find("Height");
             Transform newDistance = levelPart.transform.Find("Distance_Left");
             distanceToNext = Mathf.Abs(newDistance.position.x - lastDistance.position.x);
@@ -35,7 +34,7 @@ public class LevelGenerator : MonoBehaviour
             lastObject = levelPart;
             Destroy(levelPart,1000);
         }
-        timer = timer + 1;
+        spawnNext = false;
     }
 
 
