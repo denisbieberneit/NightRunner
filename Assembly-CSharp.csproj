@@ -57,21 +57,26 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\game\Character.cs" />
     <Compile Include="Assets\scripts\game\MainGame.cs" />
+    <Compile Include="Assets\DayNight\LightColorSetter.cs" />
     <Compile Include="Assets\scripts\menu\MainMenu.cs" />
     <Compile Include="Assets\Level.cs" />
-    <Compile Include="Assets\ButtonTime.cs" />
+    <Compile Include="Assets\DayNight\DayNightCylce.cs" />
     <Compile Include="Assets\scripts\game\Coin.cs" />
+    <Compile Include="Assets\TouchControll.cs" />
     <Compile Include="Assets\Sound.cs" />
     <Compile Include="Assets\ObstacleSpawner.cs" />
     <Compile Include="Assets\scripts\Parallax.cs" />
     <Compile Include="Assets\GameHandler.cs" />
     <Compile Include="Assets\MenuCamera.cs" />
+    <Compile Include="Assets\InventoryItem.cs" />
     <Compile Include="Assets\scripts\game\LevelGenerator.cs" />
+    <Compile Include="Assets\Inventory.cs" />
     <Compile Include="Assets\GameCamera.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\AudioManager.cs" />
+    <Compile Include="Assets\DeathScreen.cs" />
     <Compile Include="Assets\CharacterController2D.cs" />
-    <Compile Include="Assets\TouchControll.cs" />
+    <Compile Include="Assets\DayNight\MaterialColorSetter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

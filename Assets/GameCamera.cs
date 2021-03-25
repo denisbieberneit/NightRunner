@@ -9,6 +9,10 @@ public class GameCamera : MonoBehaviour
     public Transform target;
     public float smoothSpeed = 0.125f;
 
+    void Start()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+    }
 
     private void FixedUpdate()
     {

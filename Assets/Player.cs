@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     public GameCamera gameCam;
 
+    public string playerName;
+
     public GameHandler gameHandler;
     public Text scoreText;
     public Text highscoreText;
@@ -34,6 +36,8 @@ public class Player : MonoBehaviour
     public GameObject ui;
     public GameObject deathScreen;
 
+    LevelGenerator generator;
+
     public void Start()
     {
         ui.SetActive(true);
@@ -43,9 +47,9 @@ public class Player : MonoBehaviour
     private void Update()
     {
 
+        int score = (int)(Mathf.Round(transform.position.x) / 2);
         if (!isDead)
         {
-            int score = (int)(Mathf.Round(transform.position.x) / 2);
             int highscore = PlayerPrefs.GetInt("PlayerHighscore");
 
             horizontalMove = 1f * runSpeed;
@@ -57,6 +61,19 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("IsFalling", false);
             }
+            //animation speed
+            if (runSpeed > normalSpeed)
+            {
+                if (animator.GetFloat("RunningSpeed") >= 3f)
+                {
+                    animator.SetFloat("RunningSpeed", animator.GetFloat("RunningSpeed") + 0.5f);
+                }
+                else
+                {
+                    animator.SetFloat("RunningSpeed", 1);
+                }
+            }
+            //end animation speed
             if (afterSpeedUp)
             {
                 if (runSpeed > normalSpeed)
@@ -66,7 +83,6 @@ public class Player : MonoBehaviour
                     {
                         runSpeed = normalSpeed;
                         afterSpeedUp = false;
-                        //animator.SetFloat("RunningSpeed", 1f); v0.6
                     }
                     else
                     {
@@ -74,16 +90,20 @@ public class Player : MonoBehaviour
                     }
                 }
             }
+
             if (highscore < score)
             {
                 PlayerPrefs.SetInt("PlayerHighscore", score);
             }
             //animator.SetFloat("RunningSpeed",  1 + runSpeed);
+            Color tmpColor = coinText.color;
+            tmpColor.a = tmpColor.a - 0.003f;
+            coinText.color = tmpColor;
             scoreText.text = score+"m";
             coinText.text = "$" + PlayerPrefs.GetInt("PlayerCoins");
             highscoreText.text = PlayerPrefs.GetInt("PlayerHighscore")+"m";
-
         }
+        PlayerPrefs.SetInt("PlayerScore", score);
     }
 
     private void FixedUpdate()
@@ -101,6 +121,7 @@ public class Player : MonoBehaviour
 
     public void OnJumpButton()
     {
+        AudioManager.instance.Play("Jump");
         animator.SetBool("IsJumping", true);
         isJumping = true;
         inAir = true; 
@@ -111,11 +132,20 @@ public class Player : MonoBehaviour
         if (collider.gameObject.CompareTag("Coin"))
         {
             PlayerPrefs.SetInt("PlayerCoins", PlayerPrefs.GetInt("PlayerCoins") + 1);
+            Color color = coinText.color;
+            color.a = 1;
+            coinText.color = color;
+            AudioManager.instance.Play("Coin");
             Destroy(collider.gameObject);
         }
         if (collider.gameObject.CompareTag("Respawn"))
         {
             gameHandler.LoadGame();
+        }
+        if (collider.gameObject.CompareTag("levelSpawn"))
+        {
+            generator = GameObject.Find("LevelGenerator").GetComponent<LevelGenerator>();
+            generator.spawnNext = true;
         }
     }
 
@@ -128,6 +158,23 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
             ui.SetActive(false);
             deathScreen.SetActive(true);
+            if (PlayerPrefs.GetInt("PlayerScore") >= PlayerPrefs.GetInt("PlayerHighscore"))
+            {
+                AudioManager.instance.Play("Highscore");
+            }
+        }
+        if (collision.gameObject.CompareTag("FallDeath"))
+        {
+            AudioManager.instance.Play("FallDeath");
+            isDead = true;
+            Instantiate(blood, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            ui.SetActive(false);
+            deathScreen.SetActive(true);
+            if (PlayerPrefs.GetInt("PlayerScore") >= PlayerPrefs.GetInt("PlayerHighscore"))
+            {
+                AudioManager.instance.Play("Highscore");
+            }
         }
     }
 

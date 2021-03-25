@@ -5,8 +5,8 @@ using UnityEngine;
 public class TouchControll : MonoBehaviour
 {
 
-    public Player player;
-    public CharacterController2D controller;
+    Player player;
+    CharacterController2D controller;
     float jumpForce = 40f;
     float runForce = 40f;
     float forceMax = 1200f;
@@ -14,6 +14,12 @@ public class TouchControll : MonoBehaviour
     //things for swipe control
     private Vector2 fp;
     private Vector2 lp;
+
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        controller = GameObject.FindWithTag("Player").GetComponent<CharacterController2D>();
+    }
 
     void Update()
     {

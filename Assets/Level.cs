@@ -15,5 +15,6 @@ public class Level : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         generator.spawnNext= true;
+        Debug.Log("triggert");
     }
 }

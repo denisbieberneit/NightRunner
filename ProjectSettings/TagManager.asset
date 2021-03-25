@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Coin
   - Death
+  - levelSpawn
+  - FallDeath
   layers:
   - Default
   - TransparentFX
@@ -42,4 +44,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Backbackground
+    uniqueID: 2202384419
+    locked: 0
+  - name: wolke
+    uniqueID: 3005164527
+    locked: 0
+  - name: Background
+    uniqueID: 3502048247
+    locked: 0
+  - name: character
+    uniqueID: 480730129
+    locked: 0
+  - name: floor
+    uniqueID: 783709403
+    locked: 0
+  - name: enemy
+    uniqueID: 1340064095
+    locked: 0
+  - name: ui
+    uniqueID: 3020454837
     locked: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5237675642617027682}
   - component: {fileID: 5237675642617027683}
   - component: {fileID: 5237675642617027684}
+  - component: {fileID: 6671790242562822043}
   m_Layer: 0
   m_Name: BloodSplash
   m_TagString: Untagged
@@ -222,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.7038722, b: 1, a: 1}
+      maxColor: {r: 0, g: 0.2599814, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4870,3 +4871,14 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!210 &6671790242562822043
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5237675642617027685}
+  m_Enabled: 1
+  m_SortingLayerID: 480730129
+  m_SortingLayer: 4
+  m_SortingOrder: 0
