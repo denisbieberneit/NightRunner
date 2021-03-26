@@ -11,7 +11,7 @@ public class DeathScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        highscore.text = PlayerPrefs.GetInt("PlayerScore") + "m";
+        score.text = PlayerPrefs.GetInt("PlayerScore") + "m";
         highscore.text = PlayerPrefs.GetInt("PlayerHighscore") + "m";
     }
 }

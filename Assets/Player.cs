@@ -62,23 +62,13 @@ public class Player : MonoBehaviour
                 animator.SetBool("IsFalling", false);
             }
             //animation speed
-            if (runSpeed > normalSpeed)
-            {
-                if (animator.GetFloat("RunningSpeed") >= 3f)
-                {
-                    animator.SetFloat("RunningSpeed", animator.GetFloat("RunningSpeed") + 0.5f);
-                }
-                else
-                {
-                    animator.SetFloat("RunningSpeed", 1);
-                }
-            }
+            animator.SetFloat("RunningSpeed", 1 + runSpeed/1200f);
             //end animation speed
             if (afterSpeedUp)
             {
                 if (runSpeed > normalSpeed)
                 {
-                    float tempRun = runSpeed -1;
+                    float tempRun = runSpeed -.5f;
                     if (tempRun <= normalSpeed)
                     {
                         runSpeed = normalSpeed;

@@ -28,6 +28,7 @@ public class TouchControll : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
+                player.afterSpeedUp = false;
                 fp = touch.position;
                 lp = touch.position;
             }
