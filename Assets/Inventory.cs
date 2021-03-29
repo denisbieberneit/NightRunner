@@ -5,34 +5,30 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     [SerializeField]
-    public List<InventoryItem> playerSkinsOwned;
+    private InventoryItem[] skins;
     public Transform spawn;
+    public int skinInPreview;
 
-    private void Awake()
+    public void Awake()
     {
-        foreach (InventoryItem item in playerSkinsOwned)
+        skins = FindObjectsOfType<InventoryItem>();
+        spawn = FindObjectOfType<Spawn>().getTransform();
+        int i = 0;
+        foreach (InventoryItem item in skins)
         {
             if (item.inUse)
             {
                 UseSkinFromCollection(item.skin.GetComponent<Player>().playerName);
+                skinInPreview = i;
             }
+            i = i+1;
         }
-    }
-
-    public void AddSkinToCollection(InventoryItem item)
-    {
-        playerSkinsOwned.Add(item);
-    }
-
-    public void RemoveSkinFromCollection(InventoryItem item)
-    {
-        playerSkinsOwned.Remove(item);
     }
 
     public void UseSkinFromCollection(string name)
     {
         Destroy(GameObject.Find("Player"));
-        foreach (InventoryItem item in playerSkinsOwned)
+        foreach (InventoryItem item in skins)
         {
             Player player = item.skin.GetComponent<Player>();
             if (player.playerName.Equals(name))
@@ -44,4 +40,35 @@ public class Inventory : MonoBehaviour
         
     }
 
+    public InventoryItem GetNextSkin()
+    {
+        skinInPreview = skinInPreview + 1;
+        int skinCount = skins.Length - 1;
+        if (skinInPreview > skinCount)
+        {
+            skinInPreview = 0;
+            return skins[0];
+        }else if (skinInPreview < 0)
+        {
+            skinInPreview = skinCount;
+            return skins[skinCount];
+        }
+        return skins[skinInPreview];
+    }
+
+    public void UseSkinFromCollectionByName(string name)
+    {
+        foreach (InventoryItem item in skins)
+        {
+            Player player = item.skin.GetComponent<Player>();
+            if (player.playerName.Equals(name))
+            {
+                item.inUse = true;
+            }
+            else
+            {
+                item.inUse = false;
+            }
+        }
+    }
 }

@@ -40,8 +40,11 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
-        ui.SetActive(true);
-        deathScreen.SetActive(false);
+        if (ui != null)
+        {
+            ui.SetActive(true);
+            deathScreen.SetActive(false);
+        }
     }
 
     private void Update()
@@ -86,12 +89,15 @@ public class Player : MonoBehaviour
                 PlayerPrefs.SetInt("PlayerHighscore", score);
             }
             //animator.SetFloat("RunningSpeed",  1 + runSpeed);
-            Color tmpColor = coinText.color;
-            tmpColor.a = tmpColor.a - 0.003f;
-            coinText.color = tmpColor;
-            scoreText.text = score+"m";
-            coinText.text = "$" + PlayerPrefs.GetInt("PlayerCoins");
-            highscoreText.text = PlayerPrefs.GetInt("PlayerHighscore")+"m";
+            if (coinText != null)
+            {
+                Color tmpColor = coinText.color;
+                tmpColor.a = tmpColor.a - 0.003f;
+                coinText.color = tmpColor;
+                scoreText.text = score+"m";
+                coinText.text = "$" + PlayerPrefs.GetInt("PlayerCoins");
+                highscoreText.text = PlayerPrefs.GetInt("PlayerHighscore")+"m";
+            }
         }
         PlayerPrefs.SetInt("PlayerScore", score);
     }
