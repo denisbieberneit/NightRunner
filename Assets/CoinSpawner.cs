@@ -8,6 +8,7 @@ public class CoinSpawner : MonoBehaviour
     [SerializeField] private Transform endpoint;
     [SerializeField] private List<GameObject> coins;
     [SerializeField] private bool spawnCoins = true;
+    [SerializeField] private List<Transform> heightSpawns;
     private Vector2 lastVec;
 
     private void FixedUpdate()
@@ -17,12 +18,12 @@ public class CoinSpawner : MonoBehaviour
             GameObject coin = GetRandomCoin();
             if (lastVec == new Vector2(0, 0))
             {
-                lastVec = new Vector2(startingPoint.position.x + 75, Random.Range(startingPoint.position.y + 3f, startingPoint.position.y + 5));
+                lastVec = new Vector2(startingPoint.position.x + 115, GetRandomHeight().position.y);
                 Instantiate(coin, lastVec, startingPoint.rotation);
             }
             else
             {
-                lastVec = new Vector2(lastVec.x + Random.Range(60,75), Random.Range(startingPoint.position.y + 3f, startingPoint.position.y + 5));
+                lastVec = new Vector2(lastVec.x + Random.Range(150,200), GetRandomHeight().position.y);
                 Instantiate(coin, lastVec, startingPoint.rotation);
             }
         }
@@ -43,5 +44,10 @@ public class CoinSpawner : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+    }
+
+    private Transform GetRandomHeight()
+    {
+        return heightSpawns[Random.Range(0, heightSpawns.Count)];
     }
 }

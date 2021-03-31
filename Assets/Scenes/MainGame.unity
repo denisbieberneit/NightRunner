@@ -3823,6 +3823,7 @@ MonoBehaviour:
   coins:
   - {fileID: 881132949}
   spawnCoins: 1
+  heightSpawns: []
 --- !u!1 &688381466
 GameObject:
   m_ObjectHideFlags: 0
@@ -11109,7 +11110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPoint: {fileID: 1904966656}
-  levelPart_01: {fileID: 300924707881873881, guid: ee4eecdd2d2b50d459b0f62da9520bf7, type: 3}
+  levelParts:
+  - {fileID: 300924707881873881, guid: ee4eecdd2d2b50d459b0f62da9520bf7, type: 3}
+  - {fileID: 6992904282561491625, guid: 5781aae3783fa9b44be5c28f2a76db03, type: 3}
+  - {fileID: 2196803105597222454, guid: 3084453228b551b47b848e604ee5c814, type: 3}
   player: {fileID: 499826011}
   spawnNext: 1
 --- !u!1 &1944708745

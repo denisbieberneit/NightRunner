@@ -79,6 +79,7 @@
     <Compile Include="Assets\CharacterController2D.cs" />
     <Compile Include="Assets\scripts\SaveSystem.cs" />
     <Compile Include="Assets\scripts\InventoryData.cs" />
+    <Compile Include="Assets\FloorCoinSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
