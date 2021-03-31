@@ -4,16 +4,41 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField]
-    private InventoryItem[] skins;
+    InventoryItem[] skins;
     public Transform spawn;
     public int skinInPreview;
 
     public void Awake()
     {
         skins = FindObjectsOfType<InventoryItem>();
+        InventoryData data = SaveSystem.LoadInventory();
+        if (data != null)
+        {
+            foreach (string skinOwned in data.ownedSkinNames)
+            {
+                foreach (InventoryItem item in skins)
+                {
+                    Debug.Log("Checking " + skinOwned);
+                    if (item.skin.GetComponentInChildren<Player>().playerName.Equals(skinOwned))
+                    {
+                        item.owned = true;
+                    }
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("No inventorydata");
+        }
+
+
         spawn = FindObjectOfType<Spawn>().getTransform();
         int i = 0;
+        string playerSkin = PlayerPrefs.GetString("PlayerSkin");
+        if (playerSkin != null)
+        {
+            UseSkinFromCollectionByName(playerSkin);
+        }
         foreach (InventoryItem item in skins)
         {
             if (item.inUse)
@@ -56,6 +81,23 @@ public class Inventory : MonoBehaviour
         return skins[skinInPreview];
     }
 
+    public InventoryItem GetPreviousSkin()
+    {
+        skinInPreview = skinInPreview - 1;
+        int skinCount = skins.Length - 1;
+        if (skinInPreview > skinCount)
+        {
+            skinInPreview = 0;
+            return skins[0];
+        }
+        else if (skinInPreview < 0)
+        {
+            skinInPreview = skinCount;
+            return skins[skinCount];
+        }
+        return skins[skinInPreview];
+    }
+
     public void UseSkinFromCollectionByName(string name)
     {
         foreach (InventoryItem item in skins)
@@ -70,5 +112,29 @@ public class Inventory : MonoBehaviour
                 item.inUse = false;
             }
         }
+    }
+
+    public InventoryItem GetSkinByName(string skin)
+    {
+        InventoryItem itemInUse = null;
+        foreach (InventoryItem item in skins)
+        {
+            Player player = item.skin.GetComponent<Player>();
+            if (player.playerName.Equals(skin))
+            {
+                itemInUse = item;
+            }
+        }
+        return itemInUse;
+    }
+
+    public InventoryItem GetSkinInUse()
+    {
+        return null;
+    }
+
+    public InventoryItem[] GetSkins()
+    {
+        return skins;
     }
 }

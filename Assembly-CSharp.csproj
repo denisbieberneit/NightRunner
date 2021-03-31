@@ -72,11 +72,13 @@
     <Compile Include="Assets\Inventory.cs" />
     <Compile Include="Assets\GameCamera.cs" />
     <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\Spawn.cs" />
     <Compile Include="Assets\AudioManager.cs" />
     <Compile Include="Assets\DeathScreen.cs" />
     <Compile Include="Assets\DayNight\MaterialColorSetter.cs" />
     <Compile Include="Assets\CharacterController2D.cs" />
-    <Compile Include="Assets\Spawn.cs" />
+    <Compile Include="Assets\scripts\SaveSystem.cs" />
+    <Compile Include="Assets\scripts\InventoryData.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

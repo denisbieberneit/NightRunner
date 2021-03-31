@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skin: {fileID: 3680140838738193229}
   inUse: 0
-  owned: 1
-  coinCost: 0
+  owned: 0
+  coinCost: 100
 --- !u!1 &3680140837944660904
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,11 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfdf46b982dff9f488bc3fd9791a754e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSkinsOwned:
-  - {fileID: 3680140837878348186}
-  - {fileID: 3680140839784258492}
-  - {fileID: 3680140839302209582}
   spawn: {fileID: 0}
+  skinInPreview: 0
 --- !u!1 &3680140838738193229
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,8 +740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skin: {fileID: 3680140839553359569}
   inUse: 1
-  owned: 0
-  coinCost: 1000
+  owned: 1
+  coinCost: 0
 --- !u!1 &3680140839535620811
 GameObject:
   m_ObjectHideFlags: 0
