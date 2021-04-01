@@ -35,6 +35,10 @@ public class Inventory : MonoBehaviour
         spawn = FindObjectOfType<Spawn>().getTransform();
         int i = 0;
         string playerSkin = PlayerPrefs.GetString("PlayerSkin");
+        if (playerSkin == "" || playerSkin == null)
+        {
+            playerSkin = "Whity";
+        }
         if (playerSkin != null)
         {
             UseSkinFromCollectionByName(playerSkin);

@@ -152,6 +152,7 @@ public class Player : MonoBehaviour
             isDead = true;
             Instantiate(blood, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            new WaitForSeconds(1);
             ui.SetActive(false);
             deathScreen.SetActive(true);
             if (PlayerPrefs.GetInt("PlayerScore") >= PlayerPrefs.GetInt("PlayerHighscore"))
@@ -173,7 +174,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
     public float GetRunspeed()
     {
         return runSpeed;

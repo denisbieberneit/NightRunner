@@ -15,6 +15,9 @@ public class TouchControll : MonoBehaviour
     private Vector2 fp;
     private Vector2 lp;
 
+    private Vector2 fp2;
+    private Vector2 lp2;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
@@ -26,6 +29,38 @@ public class TouchControll : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+            if (Input.touchCount > 1)
+            {
+                Touch touch2 = Input.GetTouch(1);
+                if (touch2.phase == TouchPhase.Began)
+                {
+                    player.afterSpeedUp = false;
+                    fp2 = touch2.position;
+                    lp2 = touch2.position;
+                }
+                if (touch2.phase == TouchPhase.Moved)
+                {
+                    lp2 = touch2.position;
+                }
+                if (touch2.phase == TouchPhase.Ended)
+                {
+                    if ((fp2.y - lp2.y) < -120)
+                    {
+                        if (!player.isDead)
+                        {
+                            jumpForce = Mathf.Abs(fp2.y - lp2.y * 2.2f);
+                            if (jumpForce > forceMax)
+                            {
+                                jumpForce = forceMax;
+                            }
+                            controller.addJumpForce = jumpForce;
+                            player.OnJumpButton();
+                        }
+                    }
+                }
+            }
+
+
             if (touch.phase == TouchPhase.Began)
             {
                 player.afterSpeedUp = false;
@@ -47,7 +82,6 @@ public class TouchControll : MonoBehaviour
                         {
                             jumpForce = forceMax;
                         }
-                        Debug.Log(jumpForce);
                         controller.addJumpForce = jumpForce;
                         player.OnJumpButton();
                     }
