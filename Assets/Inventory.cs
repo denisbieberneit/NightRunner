@@ -34,6 +34,14 @@ public class Inventory : MonoBehaviour
 
         spawn = FindObjectOfType<Spawn>().getTransform();
         int i = 0;
+
+
+        //TESTING SKINS
+        //PlayerPrefs.SetString("PlayerSkin","Wizard");
+        
+        
+        
+        
         string playerSkin = PlayerPrefs.GetString("PlayerSkin");
         if (playerSkin == "" || playerSkin == null)
         {
@@ -60,7 +68,7 @@ public class Inventory : MonoBehaviour
         foreach (InventoryItem item in skins)
         {
             Player player = item.skin.GetComponent<Player>();
-            if (player.playerName.Equals(name))
+            if (player.playerName.ToLower().Equals(name.ToLower()))
             {
                 Instantiate(item.skin,spawn);
                 break;
@@ -107,7 +115,7 @@ public class Inventory : MonoBehaviour
         foreach (InventoryItem item in skins)
         {
             Player player = item.skin.GetComponent<Player>();
-            if (player.playerName.Equals(name))
+            if (player.playerName.ToLower().Equals(name.ToLower()))
             {
                 item.inUse = true;
             }
@@ -124,7 +132,7 @@ public class Inventory : MonoBehaviour
         foreach (InventoryItem item in skins)
         {
             Player player = item.skin.GetComponent<Player>();
-            if (player.playerName.Equals(skin))
+            if (player.playerName.ToLower().Equals(skin.ToLower()))
             {
                 itemInUse = item;
             }
