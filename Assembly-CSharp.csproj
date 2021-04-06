@@ -55,31 +55,32 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\scripts\game\MainGame.cs" />
-    <Compile Include="Assets\DayNight\LightColorSetter.cs" />
-    <Compile Include="Assets\scripts\menu\MainMenu.cs" />
-    <Compile Include="Assets\Level.cs" />
-    <Compile Include="Assets\DayNight\DayNightCylce.cs" />
-    <Compile Include="Assets\TouchControll.cs" />
-    <Compile Include="Assets\Sound.cs" />
-    <Compile Include="Assets\ObstacleSpawner.cs" />
-    <Compile Include="Assets\scripts\Parallax.cs" />
-    <Compile Include="Assets\GameHandler.cs" />
-    <Compile Include="Assets\MenuCamera.cs" />
-    <Compile Include="Assets\CoinSpawner.cs" />
-    <Compile Include="Assets\InventoryItem.cs" />
-    <Compile Include="Assets\scripts\game\LevelGenerator.cs" />
-    <Compile Include="Assets\Inventory.cs" />
-    <Compile Include="Assets\GameCamera.cs" />
-    <Compile Include="Assets\Player.cs" />
-    <Compile Include="Assets\Spawn.cs" />
-    <Compile Include="Assets\AudioManager.cs" />
-    <Compile Include="Assets\DeathScreen.cs" />
-    <Compile Include="Assets\DayNight\MaterialColorSetter.cs" />
-    <Compile Include="Assets\CharacterController2D.cs" />
-    <Compile Include="Assets\scripts\SaveSystem.cs" />
-    <Compile Include="Assets\scripts\InventoryData.cs" />
-    <Compile Include="Assets\FloorCoinSpawner.cs" />
+    <Compile Include="Assets\Scripts\Game\MainGame.cs" />
+    <Compile Include="Assets\Scripts\DayNight\LightColorSetter.cs" />
+    <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Level.cs" />
+    <Compile Include="Assets\Scripts\FloorCoinSpawner.cs" />
+    <Compile Include="Assets\Scripts\DayNight\DayNightCylce.cs" />
+    <Compile Include="Assets\Scripts\TouchControll.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
+    <Compile Include="Assets\Scripts\ObstacleSpawner.cs" />
+    <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\GameHandler.cs" />
+    <Compile Include="Assets\Scripts\MenuCamera.cs" />
+    <Compile Include="Assets\Scripts\CoinSpawner.cs" />
+    <Compile Include="Assets\Scripts\InventoryItem.cs" />
+    <Compile Include="Assets\Scripts\Game\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\GameCamera.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Spawn.cs" />
+    <Compile Include="Assets\Scripts\InventoryData.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\DeathScreen.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem.cs" />
+    <Compile Include="Assets\Scripts\DayNight\MaterialColorSetter.cs" />
+    <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+    <Compile Include="Assets\Shop.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

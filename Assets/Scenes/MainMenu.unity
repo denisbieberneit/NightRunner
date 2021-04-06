@@ -398,8 +398,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1264203306}
   m_HandleRect: {fileID: 1264203305}
   m_Direction: 2
-  m_Value: 1.0000007
-  m_Size: 0.6229404
+  m_Value: -0.000035691857
+  m_Size: 0.46961042
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -789,7 +789,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 169142347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &169142347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1225,8 +1237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 32}
-  m_SizeDelta: {x: 487.8034, y: 297.73157}
+  m_AnchoredPosition: {x: 0, y: 11.1}
+  m_SizeDelta: {x: 100.83061, y: 97.94974}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187917497
 MonoBehaviour:
@@ -1248,7 +1260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4944230376442633554, guid: c3f603f884bf1264385f6375f39df438, type: 3}
+  m_Sprite: {fileID: 5304202850863732263, guid: 0cdc614ed9bd8e845af6bf74a78e1d5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1504,8 +1516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: 32}
-  m_SizeDelta: {x: 487.8034, y: 297.73157}
+  m_AnchoredPosition: {x: 0, y: 11.1}
+  m_SizeDelta: {x: 131.26581, y: 131.26581}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205414750
 MonoBehaviour:
@@ -1527,7 +1539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4944230376442633554, guid: 441a0d2e01bdb4c4f95d321af9da5ead, type: 3}
+  m_Sprite: {fileID: 4944230376442633554, guid: 2a9d414d8752d014ca873fa3f3c64fd1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2365,9 +2377,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonSkin
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnSkinCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2397,7 +2409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caeb6aaced0c8744a9c7b514e1cf4623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d96bceda3cb73f4ba2ab3855e63e4e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2691,7 +2703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120.91, y: -399.74783}
+  m_AnchoredPosition: {x: -120.91, y: -399.74762}
   m_SizeDelta: {x: 1268.8613, y: 1622.891}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &383092203
@@ -3104,9 +3116,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonSkin
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnSkinCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3136,7 +3148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caeb6aaced0c8744a9c7b514e1cf4623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d96bceda3cb73f4ba2ab3855e63e4e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3543,8 +3555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.19565, y: -14}
-  m_SizeDelta: {x: 487.8034, y: 297.73157}
+  m_AnchoredPosition: {x: -0.000024319, y: 11.1}
+  m_SizeDelta: {x: 81.018074, y: 110.80632}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648316265
 MonoBehaviour:
@@ -3566,7 +3578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4944230376442633554, guid: d4c2b6cdaa1c5254b9f08efa3ffad633, type: 3}
+  m_Sprite: {fileID: 4944230376442633554, guid: 2bed0e34d1fcbcd48881e4d76f3b5e67, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4547,8 +4559,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 30}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: 0.19551, y: 11.1}
+  m_SizeDelta: {x: 65.59144, y: 70.063576}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922404159
 MonoBehaviour:
@@ -4570,7 +4582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4944230376442633554, guid: 054c9302b73d5864cb9c63687144c279, type: 3}
+  m_Sprite: {fileID: 4944230376442633554, guid: 884739dce83df56418c887b18da774a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4989,6 +5001,7 @@ GameObject:
   - component: {fileID: 1064291896}
   - component: {fileID: 1064291895}
   - component: {fileID: 1064291894}
+  - component: {fileID: 1064291897}
   m_Layer: 5
   m_Name: ShopCanvas
   m_TagString: Untagged
@@ -5081,6 +5094,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
+--- !u!114 &1064291897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064291892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410166e1e9d568945af050615f577c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInShop:
+  - {fileID: 1429696381}
+  - {fileID: 1445003266}
+  - {fileID: 454691455}
+  - {fileID: 1566313764}
+  - {fileID: 1626393639}
+  - {fileID: 1507038349}
+  - {fileID: 342213334}
+  selectedCard: {fileID: 21300000, guid: caeb6aaced0c8744a9c7b514e1cf4623, type: 3}
+  unselectedCard: {fileID: 21300000, guid: 6d96bceda3cb73f4ba2ab3855e63e4e4, type: 3}
+  buySelectButton: {fileID: 1952506333}
+  shopCanvas: {fileID: 1064291892}
+  menuCanvas: {fileID: 849082702}
+  player: {fileID: 0}
+  coinsAvailable: {fileID: 116293775}
+  buyButtonText: {fileID: 1523798590}
+  inventory: {fileID: 1361759140}
+  selectSprite: {fileID: 21300000, guid: f18afd1d3fb12a54191f42a5b7361f09, type: 3}
+  buySprite: {fileID: 21300000, guid: e6250971b64f3d848b48f5f846c36374, type: 3}
 --- !u!1 &1121901114
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,8 +5365,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 44}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: -20, y: 11.1}
+  m_SizeDelta: {x: 135.59045, y: 135.59045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180311165
 MonoBehaviour:
@@ -5344,7 +5388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3889816273589911322, guid: ff82f62e52b33df44ad45c002ab800ef, type: 3}
+  m_Sprite: {fileID: 3889816273589911322, guid: 1c10f8872116c16448edb7af9b6fd157, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5675,8 +5719,8 @@ RectTransform:
   m_Father: {fileID: 1364142155}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.37705958}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.46961042}
   m_AnchoredPosition: {x: 0, y: 29.81}
   m_SizeDelta: {x: 20, y: -39.62671}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6710,8 +6754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.19565, y: 0}
-  m_SizeDelta: {x: 487.8034, y: 297.73157}
+  m_AnchoredPosition: {x: 9, y: 11.1}
+  m_SizeDelta: {x: 269.01678, y: 266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411259397
 MonoBehaviour:
@@ -6733,7 +6777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2516595032967115045, guid: 418bd18941cbab644bf5953c985b950f, type: 3}
+  m_Sprite: {fileID: -2516595032967115045, guid: a3bf22f325e95d647a7c050abef9fac8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6812,7 +6856,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caeb6aaced0c8744a9c7b514e1cf4623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d96bceda3cb73f4ba2ab3855e63e4e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6873,9 +6917,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonSkin
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnSkinCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7141,9 +7185,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonSkin
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnSkinCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7173,7 +7217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caeb6aaced0c8744a9c7b514e1cf4623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d96bceda3cb73f4ba2ab3855e63e4e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7298,12 +7342,6 @@ MonoBehaviour:
   inventory: {fileID: 1361759140}
   shopCanvas: {fileID: 1064291892}
   menuCanvas: {fileID: 849082702}
-  coinsAvailable: {fileID: 1341498183}
-  buySelectButton: {fileID: 1952506333}
-  player: {fileID: 1798141671}
-  buyButtonText: {fileID: 1523798590}
-  selectSprite: {fileID: 21300000, guid: f18afd1d3fb12a54191f42a5b7361f09, type: 3}
-  buySprite: {fileID: 21300000, guid: d2804f925cc46744badea7e353a97a67, type: 3}
 --- !u!4 &1467508470
 Transform:
   m_ObjectHideFlags: 0
@@ -7436,9 +7474,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonSkin
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnSkinCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7468,7 +7506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caeb6aaced0c8744a9c7b514e1cf4623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d96bceda3cb73f4ba2ab3855e63e4e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8116,9 +8154,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonSkin
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnSkinCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8148,7 +8186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caeb6aaced0c8744a9c7b514e1cf4623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d96bceda3cb73f4ba2ab3855e63e4e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8865,9 +8903,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonSkin
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnSkinCardButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8897,7 +8935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caeb6aaced0c8744a9c7b514e1cf4623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d96bceda3cb73f4ba2ab3855e63e4e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8952,7 +8990,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 89.138, y: -0.00031305364}
+  m_AnchoredPosition: {x: 89.138, y: 482.25375}
   m_SizeDelta: {x: -178.27563, y: 1278.9397}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1739469933
@@ -10106,9 +10144,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: UseSkin
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnSelectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10190,8 +10228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: 0.000022888}
-  m_SizeDelta: {x: 487.8034, y: 297.73157}
+  m_AnchoredPosition: {x: 1.3, y: 11.1}
+  m_SizeDelta: {x: 269.01678, y: 266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968540229
 MonoBehaviour:
@@ -10213,7 +10251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6087674382099482913, guid: 4ddea42a0b5029141a643dbf68cdc191, type: 3}
+  m_Sprite: {fileID: -6087674382099482913, guid: acff10f07ce00c74a8816ed25efbe433, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10852,9 +10890,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467508469}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonShop
+      - m_Target: {fileID: 1064291897}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: OnShowShopButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
