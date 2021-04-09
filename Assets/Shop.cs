@@ -25,6 +25,7 @@ public class Shop : MonoBehaviour
 
 
     private string selectedSkinName;
+    private string selectedLevelName;
     private InventoryItem[] inventoryItems;
 
     void Start()
@@ -61,7 +62,7 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void OnSelectButton()
+    public void OnSelectSkinButton()
     {
         InventoryItem itemChoosen = inventory.GetComponentInChildren<Inventory>().GetSkinByName(selectedSkinName);
         if (!itemChoosen.owned)
@@ -114,5 +115,12 @@ public class Shop : MonoBehaviour
         {
             Debug.Log("Could not find skin");
         }
+    }
+
+    public void OnLevelCardButton()
+    {
+        Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        selectedLevelName = button.GetComponentInChildren<Text>().text.Trim();
+        PlayerPrefs.SetString("SelectedLevel", selectedLevelName);
     }
 }

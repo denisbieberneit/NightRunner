@@ -18,7 +18,6 @@ public class Inventory : MonoBehaviour
             {
                 foreach (InventoryItem item in skins)
                 {
-                    Debug.Log("Checking " + skinOwned);
                     if (item.skin.GetComponentInChildren<Player>().playerName.Equals(skinOwned))
                     {
                         item.owned = true;

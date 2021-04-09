@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+    public bool muted;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -57,6 +59,24 @@ public class AudioManager : MonoBehaviour
             return;
         s.isActive = false;
         s.source.Stop();
+    }
+
+    public void MuteAll()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = 0f;
+        }
+        muted = true;
+    }
+
+    public void ActivateAll()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = s.volumne;
+        }
+        muted = false;
     }
 
     public Sound GetSound(string name)

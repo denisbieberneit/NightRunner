@@ -7,7 +7,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Transform levelStart;
     [SerializeField] private List<GameObject> levelParts;
     [SerializeField] private GameObject player;
-
+    [SerializeField] private int buildingOffset;
+    [SerializeField] private bool isFirstBuilding;
 
     private Vector3 lastEndPosition;
 
@@ -36,7 +37,14 @@ public class LevelGenerator : MonoBehaviour
 
     private Transform SpawnLevelPart(Vector3 spawnPoint)
     {
-        Transform levelPartTransform = Instantiate(getRandomLevelPart(), spawnPoint, Quaternion.identity).transform;
+        float x = spawnPoint.x;
+        if (!isFirstBuilding)
+        {
+            x = x + buildingOffset;
+        }
+        isFirstBuilding = false;
+        Vector3 calc = new Vector3(x, spawnPoint.y, spawnPoint.z);
+        Transform levelPartTransform = Instantiate(getRandomLevelPart(), calc, Quaternion.identity).transform;
         return levelPartTransform;
     }
 

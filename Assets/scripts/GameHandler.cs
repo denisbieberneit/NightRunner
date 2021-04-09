@@ -12,6 +12,11 @@ public class GameHandler : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("Level1");
+        string playerLevel = PlayerPrefs.GetString("SelectedLevel");
+        if (playerLevel == "" || playerLevel == null)
+        {
+            playerLevel = "Level1";
+        }
+        SceneManager.LoadScene(playerLevel);
     }
 }

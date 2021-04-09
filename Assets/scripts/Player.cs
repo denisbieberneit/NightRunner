@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
 
     public GameObject ui;
     public GameObject deathScreen;
+    public GameObject adsScreen;
+
 
     LevelGenerator generator;
 
@@ -44,7 +46,9 @@ public class Player : MonoBehaviour
         {
             ui.SetActive(true);
             deathScreen.SetActive(false);
+            adsScreen.SetActive(false);
         }
+        PlayerPrefs.SetInt("PlayerCoinsRun", 0);
     }
     
     private void FixedUpdate()
@@ -113,7 +117,10 @@ public class Player : MonoBehaviour
 
     public void OnJumpButton()
     {
-        AudioManager.instance.Play("Jump");
+        if (!inAir)
+        {
+            AudioManager.instance.Play("Jump");
+        }
         animator.SetBool("IsJumping", true);
         isJumping = true;
         inAir = true; 
@@ -128,6 +135,7 @@ public class Player : MonoBehaviour
             color.a = 1;
             coinText.color = color;
             AudioManager.instance.Play("Coin");
+            PlayerPrefs.SetInt("PlayerCoinsRun", PlayerPrefs.GetInt("PlayerCoinsRun") + 1);
             Destroy(collider.gameObject);
         }
         if (collider.gameObject.CompareTag("Respawn"))
@@ -145,29 +153,43 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Death"))
         {
-            isDead = true;
-            Instantiate(blood, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            new WaitForSeconds(1);
-            ui.SetActive(false);
-            deathScreen.SetActive(true);
-            if (PlayerPrefs.GetInt("PlayerScore") >= PlayerPrefs.GetInt("PlayerHighscore"))
-            {
-                AudioManager.instance.Play("Highscore");
-            }
+            PlayerDeath();
         }
         if (collision.gameObject.CompareTag("FallDeath"))
         {
             AudioManager.instance.Play("FallDeath");
-            isDead = true;
-            Instantiate(blood, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            ui.SetActive(false);
+            PlayerDeath();
+        }
+    }
+
+    private void PlayerDeath()
+    {
+        if (PlayerPrefs.HasKey("PlayerDeath"))
+        {
+            PlayerPrefs.SetInt("PlayerDeath", PlayerPrefs.GetInt("PlayerDeath") + 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("PlayerDeath", 1);
+        }
+        isDead = true;
+        Instantiate(blood, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        new WaitForSeconds(1);
+        ui.SetActive(false);
+        if (PlayerPrefs.GetInt("PlayerDeath") >= 4)
+        {
+            adsScreen.SetActive(true);
+            PlayerPrefs.SetInt("PlayerDeath", 0);
+        }
+        else
+        {
             deathScreen.SetActive(true);
-            if (PlayerPrefs.GetInt("PlayerScore") >= PlayerPrefs.GetInt("PlayerHighscore"))
-            {
-                AudioManager.instance.Play("Highscore");
-            }
+        }
+
+        if (PlayerPrefs.GetInt("PlayerScore") >= PlayerPrefs.GetInt("PlayerHighscore"))
+        {
+            AudioManager.instance.Play("Highscore");
         }
     }
     public float GetRunspeed()

@@ -7,7 +7,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] Transform levelPart;
     private Transform startingPoint;
     private Transform endpoint;
-    [SerializeField] private Transform height;
+    private Transform height;
     [SerializeField] private List<GameObject> obstacles;
 
     public float startingRangeObstacle;
@@ -21,6 +21,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         startingPoint = levelPart.Find("Distance_Left").transform;
         endpoint = levelPart.Find("Distance_Right").transform;
+        height = levelPart.Find("Height").transform;
     }
 
     private void FixedUpdate()
@@ -30,12 +31,12 @@ public class ObstacleSpawner : MonoBehaviour
             GameObject obstacle = getRandomLevelPart();
             if (lastVec == new Vector2(0,0))
             {
-                lastVec = new Vector2(startingPoint.position.x + startingRangeObstacle, height.position.y);
+                lastVec = new Vector2(startingPoint.position.x + startingRangeObstacle, height.transform.position.y);
                 Instantiate(obstacle,lastVec, height.rotation);
             }
             else
             {
-                lastVec = new Vector2(lastVec.x + distanceBetweenObstacle, height.position.y);
+                lastVec = new Vector2(lastVec.x + distanceBetweenObstacle, height.transform.position.y);
                 Instantiate(obstacle, lastVec, height.rotation);
             }
             if (endpoint.position.x - endRangeBetweenObstacle <= lastVec.x)
