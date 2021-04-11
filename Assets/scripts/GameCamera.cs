@@ -19,6 +19,10 @@ public class GameCamera : MonoBehaviour
         if(target != null)
         {
             Vector3 desiredPos = new Vector3(target.position.x, target.position.y, -30) + offset;
+            if (target.GetComponent<Player>().inAir)
+            {
+                desiredPos = new Vector3(target.position.x , target.position.y, -30) + offset;
+            }
             Vector3 smoothedPos = Vector3.Lerp(transform.position, desiredPos, smoothSpeed);
             transform.position = smoothedPos;
         }

@@ -1733,6 +1733,7 @@ MonoBehaviour:
     source: {fileID: 0}
     loop: 0
     isActive: 0
+  muted: 0
 --- !u!4 &332424138
 Transform:
   m_ObjectHideFlags: 0

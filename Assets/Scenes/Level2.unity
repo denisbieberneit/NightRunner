@@ -545,6 +545,7 @@ MonoBehaviour:
   levelParts:
   - {fileID: 4193175169209539747, guid: 84eb8b52ef2fc694babc99cc98169646, type: 3}
   - {fileID: 5072286349234880490, guid: 3a7f596a64cd6334e8ffc4f48e57a556, type: 3}
+  - {fileID: 176075742301632681, guid: bc2e0c91554d217439de33ce4f7606b0, type: 3}
   player: {fileID: 2100673121}
   buildingOffset: 0
   isFirstBuilding: 0

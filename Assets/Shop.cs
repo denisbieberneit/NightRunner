@@ -20,6 +20,8 @@ public class Shop : MonoBehaviour
     [SerializeField] Text buyButtonText;
     [SerializeField] GameObject inventory;
 
+    [SerializeField] GameObject levelGrid;
+
     public Sprite selectSprite;
     public Sprite buySprite;
 
@@ -122,5 +124,6 @@ public class Shop : MonoBehaviour
         Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         selectedLevelName = button.GetComponentInChildren<Text>().text.Trim();
         PlayerPrefs.SetString("SelectedLevel", selectedLevelName);
+        SaveSystem.SaveLevels(levelGrid.GetComponentsInChildren<LevelItem>());
     }
 }

@@ -49,13 +49,6 @@ public class CoinSpawner : MonoBehaviour
         return coins[Random.Range(0, coins.Count)];
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Death"))
-        {
-            Destroy(collision.gameObject);
-        }
-    }
 
     private Transform GetRandomHeight()
     {

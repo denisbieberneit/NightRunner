@@ -38,4 +38,36 @@ public static class SaveSystem
         }
     }
 
+    public static void SaveLevels(LevelItem[] levelItems)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        string path = Application.persistentDataPath + "/levelItems.level";
+
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        LevelData data = new LevelData(levelItems);
+        formatter.Serialize(stream, data);
+
+        stream.Close();
+    }
+
+    public static LevelData LoadLevels()
+    {
+        string path = Application.persistentDataPath + "/levelItems.level";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            LevelData data = formatter.Deserialize(stream) as LevelData;
+            stream.Close();
+            return data;
+        }
+        else
+        {
+            Debug.Log("Error while loading levels");
+            return null;
+        }
+    }
+
 }
